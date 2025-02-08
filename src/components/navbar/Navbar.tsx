@@ -51,7 +51,7 @@ const Navbar = () => {
     <Fragment>
       <nav className="padding-container max-container py-4 flex items-center justify-between">
         <Link href="/" className="font-medium text-lg hover:animate-bounce">
-          Offi ✌️
+          Smaran ✌️
         </Link>
         <ul className="hidden md:flex gap-6 items-center justify-between font-medium">
           <NavItem
@@ -70,7 +70,7 @@ const Navbar = () => {
           </Link>
 
           <li className="annimate-border-btn cursor-pointer p-[0.5px]">
-            <Link href="mailto:offiongbassidev@gmail.com" target="_blank">
+            <Link href="mailto:smaranshaha@gmail.com" target="_blank">
               <Button type="button" variant="primary" className="bg-black">
                 Contact me
               </Button>
