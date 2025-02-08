@@ -1,32 +1,40 @@
 "use client";
-
+import profile from "../../../public/f-fotor-bg-remover-20250131183429.png";
 import { TypeAnimation } from "react-type-animation";
 import { useTheme } from "next-themes"; // Import for theme switching
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const skills = [
-  "Next.js",
+  "Next.JS",
+  "React.JS",
   "TypeScript",
-  "React",
-  "GSAP",
-  "Tailwind CSS",
-  "Framer Motion",
+  "JavaScript",
   "Node.js",
-  "Express",
+  "Redux",
+  "Redux-Toolkit",
   "MongoDB",
+  "Mongoose",
+  "Express",
+  "GSAP",
+  "HTML 5",
+  "CSS 3",
+  "Tailwind CSS",
+  "Bootstrap",
+  "Shadcn-UI",
+  "Framer Motion",
+  "Firebase",
+  "JWT Token",
+  "Socket.IO",
+  "Stripe API",
+  "PayPal SDK",
 ];
 
 const education = [
   {
-    degree: "B.Tech in Computer Science",
-    institution: "XYZ University",
-    year: "2021 - Present",
-  },
-  {
-    degree: "High School Diploma",
-    institution: "ABC High School",
-    year: "2019 - 2021",
+    degree: "B.Sc in Computer Science and Engineering.",
+    institution: "Daffodil International University",
+    year: "2017 - 2021",
   },
 ];
 
@@ -57,7 +65,7 @@ const About = () => {
         className="flex justify-center mb-6"
       >
         <Image
-          src="/profile.jpg" // Replace with your image path
+          src={profile} // Replace with your image path
           alt="Profile Picture"
           width={180}
           height={180}
@@ -71,9 +79,14 @@ const About = () => {
           theme === "dark" ? "text-gray-300" : "text-gray-700"
         }`}
       >
-        I'm a passionate <strong>Next.js</strong> and{" "}
-        <strong>TypeScript</strong> developer, crafting modern, high-performance
-        web applications with intuitive design and seamless animations.
+        I am a Frontend Developer passionate about building intuitive, scalable,
+        and high-performing web applications. With a strong foundation in UI
+        development and modern frontend technologies, I focus on creating
+        seamless user experiences. While my expertise lies in frontend
+        development, I am eager to expand my knowledge in backend technologies
+        and transition into full-stack development in the future. I am always
+        excited to work on innovative projects, solve challenging problems, and
+        collaborate with teams to create impactful digital solutions.
       </p>
       {/* Type Animation */}
       <TypeAnimation
