@@ -1,5 +1,5 @@
 "use client";
-import profile from "../../../public/f-fotor-bg-remover-20250131183429.png";
+import profile from "/public/profile.png";
 import { TypeAnimation } from "react-type-animation";
 import { useTheme } from "next-themes"; // Import for theme switching
 import { motion } from "framer-motion";
