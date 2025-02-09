@@ -18,28 +18,22 @@ const Footer = () => {
   return (
     <footer className="padding-container max-container flex flex-col md:flex-row justify-between gap-4 items-center py-10 border-t border-zinc-900">
       <div className="flex gap-4 items-center justify-center">
-        <Link href="https://github.com/offiongbassey" target="_blank">
+        <Link href="https://github.com/shoronshaha" target="_blank">
           <GithubIcon color={color} />
         </Link>
-        <Link
-          href="https://www.linkedin.com/in/offiong-bassey-dev"
-          target="_blank"
-        >
+        <Link href="https://www.linkedin.com/in/smaran-shaha" target="_blank">
           <LinkedInIcon color={color} />
         </Link>
-        <Link href="https://twitter.com/OffiongBassi" target="_blank">
+        <Link href="" target="_blank">
           <TwitterIcon color={color} />
         </Link>
-        <Link href="https://www.instagram.com/offiong_bassi" target="_blank">
+        <Link href="" target="_blank">
           <InstagramIcon color={color} />
         </Link>
-        <Link href="https://medium.com/@offiongbassey99" target="_blank">
+        <Link href="" target="_blank">
           <MediumIcon color={color} />
         </Link>
-        <Link
-          href="https://www.youtube.com/@OffiongBassey-zj5rv"
-          target="_blank"
-        >
+        <Link href="" target="_blank">
           <YoutubeIcon color={color} />
         </Link>
       </div>
