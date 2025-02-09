@@ -93,10 +93,10 @@ export const PROJECTS: ProjectType[] = [
     description:
       "This website about of online dress shop...this overall template created by css3 , html5 and raw javaScript",
     images: [
-      "/images/projects/dress1.PNG",
-      "/images/projects/dress2.PNG",
-      "/images/projects/dress3.PNG",
-      "/images/projects/dress4.PNG",
+      "/images/projects/dress1.png",
+      "/images/projects/dress2.png",
+      "/images/projects/dress3.png",
+      "/images/projects/dress4.png",
     ],
     link: "https://shoronshaha.github.io/Dress/",
     default_image_index: 0,
