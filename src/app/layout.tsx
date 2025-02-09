@@ -17,9 +17,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Offiong Bassey - Portfolio",
+  title: "smaran-portfolio",
   description:
-    "Offiong Bassey is an incredible software engineer, passionate about solving complex problems and building innovative products that benefit humanity.",
+    "I am incredible software engineer, passionate about solving complex problems and building innovative products that benefit humanity.",
 };
 
 export default function RootLayout({
@@ -27,17 +27,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en" suppressHydrationWarning>
-      
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-light_bg dark:bg-black text-gray-900 dark:text-white  antialiased`}
       >
         <Providers>
-        <Navbar />
-        {children}
-        <Footer/>
+          <Navbar />
+          {children}
+          <Footer />
         </Providers>
       </body>
     </html>

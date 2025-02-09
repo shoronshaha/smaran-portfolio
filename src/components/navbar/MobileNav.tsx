@@ -49,6 +49,18 @@ const MobileNav = ({ open, onClose }: Props) => {
               Contact me
             </Button>
           </Link>
+          <Link
+            href="https://drive.google.com/file/d/1Jf5LbJvCyzPyaJQAHL5aK0aiQayUomq0/view?usp=drive_link"
+            target="_blank"
+          >
+            <Button
+              type="button"
+              variant="primary"
+              className="bg-black text-white"
+            >
+              Download CV
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

@@ -76,6 +76,16 @@ const Navbar = () => {
               </Button>
             </Link>
           </li>
+          <li className="annimate-border-btn cursor-pointer p-[0.5px]">
+            <Link
+              href="https://drive.google.com/file/d/1Jf5LbJvCyzPyaJQAHL5aK0aiQayUomq0/view?usp=sharing"
+              target="_blank"
+            >
+              <Button type="button" variant="primary" className="bg-black">
+                Download CV
+              </Button>
+            </Link>
+          </li>
         </ul>
         <ul className="flex md:hidden items-center justify-center font-medium">
           <NavItem

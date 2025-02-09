@@ -36,13 +36,16 @@ const HeroSection = () => {
             className=""
           />
         </div>
-        <Link href="mailto:smaranshaha@gmail.com" target="_blank">
+        <Link
+          href="https://drive.google.com/file/d/1Jf5LbJvCyzPyaJQAHL5aK0aiQayUomq0/view?usp=sharing"
+          target="_blank"
+        >
           <Button
             type="button"
             variant="gradient"
             className="my-4 hover:animate-pulse hover:scale-105 transition-all duration-500"
           >
-            Get in Touch
+            Get My CV
           </Button>
         </Link>
       </div>
