@@ -91,11 +91,11 @@ const About = () => {
       {/* Type Animation */}
       <TypeAnimation
         sequence={[
-          "Creative UI/UX Design",
+          "I am a Frontend Developer",
           2000,
-          "Smooth Animations with GSAP",
+          "Done Creative Web Development Project",
           2000,
-          "Interactive Experiences",
+          "Interactive Experiences see my projects",
           2000,
         ]}
         wrapper="span"

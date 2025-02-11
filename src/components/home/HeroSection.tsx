@@ -27,7 +27,7 @@ const HeroSection = () => {
         <div className="min-h-20 py-2">
           <TypeAnimation
             sequence={[
-              "Hi 👋, my name is smaran shaha and I am a Software Engineer, passionate about solving complex problems and building innovative products that benefit humanity.",
+              "Hi 👋, my name is Smaran Shaha and I am a Software Engineer, passionate about solving complex problems and building innovative products that benefit humanity.",
               1000,
             ]}
             wrapper="p"
@@ -37,7 +37,7 @@ const HeroSection = () => {
           />
         </div>
         <Link
-          href="https://drive.google.com/file/d/1Jf5LbJvCyzPyaJQAHL5aK0aiQayUomq0/view?usp=sharing"
+          href="https://drive.google.com/file/d/1-ZN_L4FRibf8TwXGjwVw4YYeE7P4JyMB/view?usp=sharing"
           target="_blank"
         >
           <Button

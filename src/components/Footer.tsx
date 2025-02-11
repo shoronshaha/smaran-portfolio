@@ -6,7 +6,7 @@ import LinkedInIcon from "@/svg/LinkedInIcon";
 import MediumIcon from "@/svg/MediumIcon";
 import TwitterIcon from "@/svg/TwitterIcon";
 import YoutubeIcon from "@/svg/YoutubeIcon";
-import { MailMinus } from "lucide-react";
+import { MailMinus, PhoneCall } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 
@@ -44,6 +44,9 @@ const Footer = () => {
         <MailMinus />
         smaranshaha@gmail.com
       </Link>
+      <div className="flex dark:text-[#A7D4EE] text-black gap-4">
+        <PhoneCall /> 01770889987
+      </div>
     </footer>
   );
 };

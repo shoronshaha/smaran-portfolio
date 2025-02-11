@@ -10,6 +10,22 @@ export type ProjectType = {
 
 export const PROJECTS: ProjectType[] = [
   {
+    id: "420fd351-5fed-4e49-9628-4c7a32110cd4",
+    title: "Trendify",
+    description:
+      "Developed a visually appealing and user-friendly shopping platform where users can explore products,view details,and add items to their cart. Fully mobile-responsive for a seamless experience",
+    images: [
+      "/images/projects/trendify.png",
+      "/images/projects/trendify1.png",
+      "/images/projects/trendify2.png",
+      "/images/projects/trendify3.png",
+      "/images/projects/trendify4.png",
+    ],
+    link: "https://trendify-nextjs-ts.vercel.app/",
+    github_link: "",
+    default_image_index: 0,
+  },
+  {
     id: "420fd351-5fed-4e49-9628-4c7a32110ab4",
     title: "Clothoria Shop",
     description:

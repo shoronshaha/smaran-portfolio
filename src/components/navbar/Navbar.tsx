@@ -78,7 +78,7 @@ const Navbar = () => {
           </li>
           <li className="annimate-border-btn cursor-pointer p-[0.5px]">
             <Link
-              href="https://drive.google.com/file/d/1Jf5LbJvCyzPyaJQAHL5aK0aiQayUomq0/view?usp=sharing"
+              href="https://drive.google.com/file/d/1-ZN_L4FRibf8TwXGjwVw4YYeE7P4JyMB/view?usp=sharing"
               target="_blank"
             >
               <Button type="button" variant="primary" className="bg-black">

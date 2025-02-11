@@ -50,7 +50,7 @@ const MobileNav = ({ open, onClose }: Props) => {
             </Button>
           </Link>
           <Link
-            href="https://drive.google.com/file/d/1Jf5LbJvCyzPyaJQAHL5aK0aiQayUomq0/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1-ZN_L4FRibf8TwXGjwVw4YYeE7P4JyMB/view?usp=sharing"
             target="_blank"
           >
             <Button
