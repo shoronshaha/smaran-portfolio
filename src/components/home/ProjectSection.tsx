@@ -57,6 +57,7 @@ const ProjectSection = () => {
         />
       </div>
       <div className="flex items-center justify-center">
+        <Explore />
         <Explore mobile={true} />
       </div>
       <Appreciation />
