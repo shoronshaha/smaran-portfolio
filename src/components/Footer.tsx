@@ -16,7 +16,7 @@ const Footer = () => {
   const color = theme === "light" ? "black" : "#A7D4EE";
 
   return (
-    <footer className="padding-container max-container flex flex-col md:flex-row justify-between gap-4 items-center py-10 border-t border-zinc-900">
+    <footer suppressHydrationWarning className="padding-container max-container flex flex-col md:flex-row justify-between gap-4 items-center py-10 border-t border-zinc-900">
       <div className="flex gap-4 items-center justify-center">
         <Link href="https://github.com/shoronshaha" target="_blank">
           <GithubIcon color={color} />

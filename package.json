@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/swiper": "^6.0.0",
     "framer-motion": "^12.4.1",
     "gsap": "^3.12.7",
     "lenis": "^1.1.13",

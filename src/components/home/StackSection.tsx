@@ -189,7 +189,7 @@ const StackSection = () => {
 
       <h2 className="relative z-10 text-center text-4xl md:text-7xl font-bold leading-tight px-4">
         Languages,{" "}
-        <span className="bg-gradient-to-tr dark:from-purple-900 dark:via-gray-800 dark:to-indigo-900 from-purple-300 via-green-300 to-indigo-300 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-tr dark:from-purple-300 dark:via-gray-400 dark:to-indigo-300 from-purple-300 via-green-300 to-indigo-300 bg-clip-text text-transparent">
           Frameworks <br /> & other
         </span>{" "}
         Tools

@@ -69,7 +69,7 @@ const UnanimatedProjects = ({ projects, handleImage }: Props) => {
               <p className="mt-4 text-gray-600 dark:text-gray-300">{project.description}</p>
               <div className={`flex mt-6 ${index % 2 === 1 ? "justify-start" : "justify-start md:justify-end"}`}>
                 <Link href={project.link} target="_blank" rel="noopener">
-                  <Button variant="primary">View Project</Button>
+                  <Button variant="primary" type="button">View Project</Button>
                 </Link>
               </div>
             </div>
