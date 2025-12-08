@@ -13,7 +13,7 @@ export const PROJECTS: ProjectType[] = [
     id: "420fd351-5fed-4e49-9628-4c7o621112134",
     title: "calquick saas",
     description:
-      "Developed a visually appealing and user-friendly shopping platform where users can explore products,view details,and add items to their cart. Fully mobile-responsive for a seamless experience",
+      "Built complete React 19 + TypeScript frontend for a cookieless server-side GTM platform that bypasses ad blockers and third-party cookie restrictions.Implemented multi-language support, RBAC, PII redaction, consent mode & GDPR compliance – currently serving thousands of users and agencies.",
     images: [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765172199/Screenshot_171_dddwvq.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765171912/Screenshot_172_wuthy2.png",
@@ -35,7 +35,7 @@ export const PROJECTS: ProjectType[] = [
     id: "420fd351-5fed-4e49-9628-4c7u621116134",
     title: "hisabi saas",
     description:
-      "Developed a visually appealing and user-friendly shopping platform where users can explore products,view details,and add items to their cart. Fully mobile-responsive for a seamless experience",
+      "Delivered a fast, single-tenant POS for shopping malls with barcode scanning, thermal printing, QR payments and customer loyalty features.Made it fully offline-first using Redux Persist with auto-sync and achieved top Lighthouse scores with instant page transitions.",
     images: [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765172637/Screenshot_201_jynv9v.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765172639/Screenshot_203_qvzywy.png",
@@ -53,7 +53,7 @@ export const PROJECTS: ProjectType[] = [
     id: "420fd351-5fed-4e49-9628-4c7t621116134",
     title: "pixlyOne sGTM",
     description:
-      "Developed a visually appealing and user-friendly shopping platform where users can explore products,view details,and add items to their cart. Fully mobile-responsive for a seamless experience",
+      "Engineered React 19 + TypeScript frontend for a cookieless server-side GTM platform with GDPR compliance, PII redaction & multi-language support – serving thousands of users.",
     images: [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173257/Screenshot_210_kvrdi6.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173258/Screenshot_211_psbxsm.png",
@@ -111,10 +111,10 @@ export const PROJECTS: ProjectType[] = [
     description:
       "Developed a visually appealing and user-friendly shopping platform where users can explore products,view details,and add items to their cart. Fully mobile-responsive for a seamless experience",
     images: [
-      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168137/Screenshot_143_cjt1vf.png",
-      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168140/Screenshot_142_plxbgb.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168138/Screenshot_141_yklpbh.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168133/Screenshot_144_llkj7x.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168137/Screenshot_143_cjt1vf.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168140/Screenshot_142_plxbgb.png",
     ],
     link: "https://azmainfashion.com/",
     github_link: "",

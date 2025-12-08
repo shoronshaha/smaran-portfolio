@@ -1,184 +1,225 @@
 "use client";
 import { TypeAnimation } from "react-type-animation";
-import { useTheme } from "next-themes"; // Import for theme switching
+import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const skills = [
-  "Next.JS",
-  "React.JS",
+  "React 19",
+  "Next.js 15/16 (App Router + Turbopack)",
   "TypeScript",
-  "JavaScript",
-  "Node.js",
-  "Redux",
-  "Redux-Toolkit",
-  "MongoDB",
-  "Mongoose",
-  "Express",
-  "GSAP",
-  "HTML 5",
-  "CSS 3",
+  "Redux Toolkit + RTK Query",
   "Tailwind CSS",
-  "Bootstrap",
-  "Shadcn-UI",
   "Framer Motion",
-  "Firebase",
-  "JWT Token",
-  "Socket.IO",
-  "Stripe API",
-  "PayPal SDK",
+  "GSAP",
+  "Shadcn/ui",
+  "tailwind-merge",
+  "SSR / ISR / Partial Prerendering",
+  "Server Actions / Server Components",
+  "Edge Runtime / Middleware",
+  "Core Web Vitals / Bundle Analyzer",
+  "Code Splitting / Lazy Loading",
+  "WebP/AVIF / Image Optimization",
+  "Cloudflare CDN / R2 / Images / Polish",
+  "Cloudinary signed URLs & transformations",
+  "Vercel Analytics / Speed Insights",
+  "SSLCommerz / Stripe / PayPal",
+  "Steadfast / Pathao / RedX courier APIs",
+  "Meta CAPI / Enhanced ecommerce dataLayer",
+  "Google Tag Manager (server-side)",
+  "Vercel / Vite / Git/GitHub",
+  "Storybook / Figma / Postman / Jira / Swagger",
+  "Playwright / Vitest / ESLint / Prettier",
+  "Zod / React Hook Form / i18next",
+  "Redux Persist",
+  "Socket.IO / REST APIs",
+  "Hybrid POS + online store architecture",
+  "High-traffic marketplace platforms",
+  "Multi-tenant SaaS architecture",
+  "Production deployment with Nginx + PM2",
 ];
 
 const education = [
   {
-    degree: "B.Sc in Computer Science and Engineering.",
+    degree: "B.Sc in Computer Science and Engineering",
     institution: "Daffodil International University",
     year: "2017 - 2021",
+    cgpa: "CGPA: 3.40/4.00",
   },
 ];
 
+const certifications = [
+  "MERN Stack Development – Programming Hero (2022)",
+  "Redux-ToolKit Mastery – Learn with Sumit (2023)",
+];
+
 const About = () => {
-  const { theme } = useTheme(); // Use theme from next-themes
+  const { theme } = useTheme();
 
   return (
     <section
       suppressHydrationWarning
-      className={`py-16 px-8 max-w-4xl mx-auto text-center rounded-2xl shadow-lg ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+      className={`py-16 px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto rounded-2xl shadow-xl ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"
         }`}
     >
       {/* About Title */}
       <motion.h2
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-5xl font-extrabold mb-8"
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="text-4xl sm:text-5xl font-extrabold mb-10 text-center tracking-tight"
       >
         About Me
       </motion.h2>
 
-      {/* Profile Image */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-        className="flex justify-center mb-6"
-      >
-        <Image
-          src={"https://res.cloudinary.com/dck5iqtu3/image/upload/v1765177549/profile_g3cmjo.png"}
-          alt="Profile Picture"
-          width={180}
-          height={180}
-          quality={100}
-          className="rounded-full border-4 border-gray-700 shadow-xl"
-        />
-      </motion.div>
+      {/* Profile and Description - Responsive Flex/Grid */}
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 mb-12">
+        {/* Profile Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex-shrink-0"
+        >
+          <Image
+            src="https://res.cloudinary.com/dck5iqtu3/image/upload/v1765177549/profile_g3cmjo.png"
+            alt="Profile Picture"
+            width={220}
+            height={220}
+            quality={100}
+            className="rounded-full border-4 border-cyan-500 shadow-2xl hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
 
-      {/* Description */}
-      <p
-        className={`text-lg font-medium mb-6 max-w-2xl mx-auto ${theme === "dark" ? "text-gray-300" : "text-gray-700"
-          }`}
-      >
-        I am a Frontend Developer passionate about building intuitive, scalable,
-        and high-performing web applications. With a strong foundation in UI
-        development and modern frontend technologies, I focus on creating
-        seamless user experiences. While my expertise lies in frontend
-        development, I am eager to expand my knowledge in backend technologies
-        and transition into full-stack development in the future. I am always
-        excited to work on innovative projects, solve challenging problems, and
-        collaborate with teams to create impactful digital solutions.
-      </p>
-      {/* Type Animation */}
-      <TypeAnimation
-        sequence={[
-          "I am a Frontend Developer",
-          2000,
-          "Done Creative Web Development Project",
-          2000,
-          "Interactive Experiences see my projects",
-          2000,
-        ]}
-        wrapper="span"
-        speed={50}
-        repeat={Infinity}
-        className="text-2xl font-bold text-blue-400"
-      />
+        {/* Description and Type Animation */}
+        <div className="flex-grow text-center md:text-left">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className={`text-base sm:text-lg leading-relaxed mb-6 ${theme === "dark" ? "text-gray-300" : "text-gray-700"
+              }`}
+          >
+            Results-driven Frontend Engineer with 1+ years of production experience at ExpressItBD. Delivered 8+ live projects serving thousands of active users, including multi-tenant POS systems (CalQuick & Hisabi), privacy-first server-side platform (PixlyOne), and high-traffic e-commerce platforms. Expert in React 19, Next.js 15&16, TypeScript, and performance engineering — consistently achieving Lighthouse scores and sub-sec load times using SSR/ISR, Cloudflare CDN, and modern optimization techniques. Actively transitioning into a Full-Stack & DevOps role, passionate about backend technologies (Node.js, NestJS, PostgreSQL), cloud infrastructure (AWS, Cloudflare, Vercel), containerization (Docker, Kubernetes), CI/CD pipelines, and Infrastructure-as-Code.
+          </motion.p>
+
+          {/* Type Animation */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <TypeAnimation
+              sequence={[
+                "Frontend Engineer",
+                2000,
+                "React & Next.js Expert",
+                2000,
+                "Performance Optimizer",
+                2000,
+                "Building Scalable SaaS",
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+              className="text-xl sm:text-2xl font-bold text-cyan-400 block"
+            />
+          </motion.div>
+        </div>
+      </div>
 
       {/* Skills Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="mt-10"
+        transition={{ duration: 0.8, delay: 0.6 }}
+        className="mb-12"
       >
         <h3
-          className={`text-3xl font-bold mb-6 ${theme === "dark" ? "text-white" : "text-black"
+          className={`text-3xl sm:text-4xl font-bold mb-8 text-center ${theme === "dark" ? "text-white" : "text-black"
             }`}
         >
-          Skills
+          Technical Skills
         </h3>
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 gap-6"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
-          }}
-        >
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              whileHover={{ scale: 1.1, borderColor: "#38bdf8" }}
-              className="p-4 bg-gray-800 text-gray-300 font-semibold rounded-lg shadow-lg border-2 border-transparent transition-all duration-300"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
+              whileHover={{ scale: 1.05, borderColor: "#06b6d4" }}
+              className={`p-4 rounded-xl shadow-md border-2 border-transparent text-center font-semibold transition-all duration-300 ${theme === "dark" ? "bg-gray-800 text-gray-300" : "bg-gray-100 text-gray-700"
+                }`}
             >
               {skill}
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </motion.div>
 
-      {/* Education Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="mt-12"
-      >
-        <h3
-          className={`text-3xl font-bold mb-6 ${theme === "dark" ? "text-white" : "text-black"
-            }`}
-        >
-          Education
-        </h3>
+      {/* Education & Certifications - Side by Side on Medium+ Screens */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Education Section */}
         <motion.div
-          className="space-y-4"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
-          }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
         >
-          {education.map((item, index) => (
-            <motion.div
-              key={index}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              className="p-4 bg-gray-800 text-gray-300 font-semibold rounded-lg shadow-lg border-2 border-transparent"
-            >
-              <h4 className="font-bold">{item.degree}</h4>
-              <p>{item.institution}</p>
-              <p className="text-sm text-gray-400">{item.year}</p>
-            </motion.div>
-          ))}
+          <h3
+            className={`text-3xl sm:text-4xl font-bold mb-6 text-center md:text-left ${theme === "dark" ? "text-white" : "text-black"
+              }`}
+          >
+            Education
+          </h3>
+          <div className="space-y-4">
+            {education.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.2 * index }}
+                className={`p-6 rounded-xl shadow-lg ${theme === "dark" ? "bg-gray-800 text-gray-300" : "bg-gray-100 text-gray-700"
+                  }`}
+              >
+                <h4 className="text-xl font-bold mb-1">{item.degree}</h4>
+                <p className="text-lg">{item.institution}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{item.year}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{item.cgpa}</p>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
-      </motion.div>
+
+        {/* Certifications Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+        >
+          <h3
+            className={`text-3xl sm:text-4xl font-bold mb-6 text-center md:text-left ${theme === "dark" ? "text-white" : "text-black"
+              }`}
+          >
+            Certifications & Training
+          </h3>
+          <div className="space-y-4">
+            {certifications.map((cert, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.2 * index }}
+                className={`p-4 rounded-xl shadow-lg text-center ${theme === "dark" ? "bg-gray-800 text-gray-300" : "bg-gray-100 text-gray-700"
+                  }`}
+              >
+                {cert}
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 };

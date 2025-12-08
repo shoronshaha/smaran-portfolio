@@ -5,82 +5,145 @@ import StrokeBackground from "@/components/StrokeBackground";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Grip } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const STACK_INFO = [
   "I love programming,",
-  "I love solving complex problems 👌,",
-  "and I'm in love with music 🥰.",
+  "I love solving complex problems",
+  "and I'm in love with music",
 ];
 
 const StackSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    const ctx = gsap.context(() => {
+      const mm = gsap.matchMedia();
 
-    const scrollTriggerSettings = {
-      trigger: ".main",
-      start: "top 25%",
-      toggleActions: "play reverse play reverse",
-    };
+      // Desktop (>= 768px)
+      mm.add("(min-width: 768px)", () => {
+        const leftX = [-800, -900, -400];
+        const rightX = [800, 900, 400];
+        const rotL = [-30, -20, -35];
+        const rotR = [30, 20, 35];
+        const yVals = [100, -150, -400];
 
-    const leftXValues = [-800, -900, -400];
-    const rightXValues = [800, 900, 400];
-    const leftRotationValues = [-30, -20, -35];
-    const rightRotationValues = [30, 20, 35];
-    const yValues = [100, -150, -400];
+        gsap.utils.toArray<HTMLElement>(".row").forEach((row, i) => {
+          const left = row.querySelector<HTMLElement>(".card-left")!;
+          const right = row.querySelector<HTMLElement>(".card-right")!;
 
-    gsap.utils.toArray(".row").forEach((row, index) => {
-      const cardLeft = (row as HTMLElement).querySelector(
-        ".card-left"
-      ) as HTMLElement;
-      const cardRight = (row as HTMLElement).querySelector(
-        ".card-right"
-      ) as HTMLElement;
+          gsap.to(left, {
+            x: leftX[i],
+            y: yVals[i],
+            rotation: rotL[i],
+            ease: "none",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top center",
+              end: "+=150%",
+              scrub: 1,
+              invalidateOnRefresh: true,
+            },
+          });
 
-      gsap.to(cardLeft, {
-        x: leftXValues[index],
-        scrollTrigger: {
-          trigger: ".main",
-          start: "top center",
-          end: "150% bottom",
-          scrub: true,
-          onUpdate: (self) => {
-            const progress = self.progress;
-            cardLeft.style.transform = `translateX(${
-              progress * leftXValues[index]
-            }px) translateY(${progress * yValues[index]}px) rotate(${
-              progress * leftRotationValues[index]
-            }deg)`;
-
-            cardRight.style.transform = `translateX(${
-              progress * rightXValues[index]
-            }px) translateY(${progress * yValues[index]}px) rotate(${
-              progress * rightRotationValues[index]
-            }deg)`;
-          },
-        },
+          gsap.to(right, {
+            x: rightX[i],
+            y: yVals[i],
+            rotation: rotR[i],
+            ease: "none",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top center",
+              end: "+=150%",
+              scrub: 1,
+              invalidateOnRefresh: true,
+            },
+          });
+        });
       });
-    });
 
-    gsap.to(".stack-info p", {
-      y: 0,
-      stagger: 0.1,
-      duration: 0.5,
-      ease: "power1.out",
-      scrollTrigger: scrollTriggerSettings,
-    });
+      // Mobile (< 768px)
+      mm.add("(max-width: 767px)", () => {
+        const leftX = [-180, -220, -140];
+        const rightX = [180, 220, 140];
+        const rotL = [-15, -12, -18];
+        const rotR = [15, 12, 18];
+        const yVals = [60, -90, -160];
 
-    gsap.to(".main button", {
-      y: 0,
-      opacity: 1,
-      delay: 0.25,
-      duration: 0.5,
-      ease: "power1.out",
-      scrollTrigger: scrollTriggerSettings,
-    });
+        gsap.utils.toArray<HTMLElement>(".row").forEach((row, i) => {
+          const left = row.querySelector<HTMLElement>(".card-left")!;
+          const right = row.querySelector<HTMLElement>(".card-right")!;
+
+          gsap.to(left, {
+            x: leftX[i],
+            y: yVals[i],
+            rotation: rotL[i],
+            ease: "none",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 30%",
+              end: "+=120%",
+              scrub: 1,
+              invalidateOnRefresh: true,
+            },
+          });
+
+          gsap.to(right, {
+            x: rightX[i],
+            y: yVals[i],
+            rotation: rotR[i],
+            ease: "none",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 30%",
+              end: "+=120%",
+              scrub: 1,
+              invalidateOnRefresh: true,
+            },
+          });
+        });
+      });
+
+      // Text reveal (same for all screens)
+      gsap.fromTo(
+        ".stack-info p",
+        { y: 60 },
+        {
+          y: 0,
+          duration: 0.9,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 30%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Button appear
+      gsap.fromTo(
+        ".main button",
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          delay: 0.4,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 30%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }, sectionRef);
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ctx.revert(); // সবকিছু ক্লিন করে দেয় (ScrollTrigger সহ)
     };
   }, []);
 
@@ -88,18 +151,24 @@ const StackSection = () => {
     const rows = [];
     for (let i = 1; i <= 3; i++) {
       rows.push(
-        <div className="row relative flex justify-center gap-4 w-full" key={i}>
-          <div className="relative rounded-3xl overflow-hidden w-[50%] md:w-[30%] h-[70px] md:h-[360px] card-left">
+        <div
+          className="row relative flex justify-center gap-4 md:gap-8 w-full my-4 md:my-8"
+          key={i}
+        >
+          {/* Left Card */}
+          <div className="card-left relative rounded-3xl overflow-hidden w-[50%] md:w-[30%] h-[180px] md:h-[360px] shadow-2xl">
             <div
-              className="bg-cover bg-center bg-no-repeat w-full h-full"
+              className="w-full h-full bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url(/images/stack/stack-${2 * i - 1}.jpg)`,
               }}
             />
           </div>
-          <div className="relative rounded-3xl overflow-hidden  w-[50%] md:w-[30%] h-[70px] md:h-[360px] card-right">
+
+          {/* Right Card */}
+          <div className="card-right relative rounded-3xl overflow-hidden w-[50%] md:w-[30%] h-[180px] md:h-[360px] shadow-2xl">
             <div
-              className="bg-cover bg-center bg-no-repeat w-full h-full"
+              className="w-full h-full bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url(/images/stack/stack-${2 * i}.jpg)`,
               }}
@@ -108,38 +177,48 @@ const StackSection = () => {
         </div>
       );
     }
-
     return rows;
   };
+
   return (
-    <section className="main max-container relative flex flex-col justify-center overflow-x-hidden items-center">
+    <section
+      ref={sectionRef}
+      className="main relative max-container py-12 md:py-24 overflow-hidden"
+    >
       <StrokeBackground />
-      <h2 className="py-4 md:py-10 text-4xl md:text-7xl font-semibold text-center">
+
+      <h2 className="relative z-10 text-center text-4xl md:text-7xl font-bold leading-tight px-4">
         Languages,{" "}
-        <span className="bg-gradient-to-tr dark:from-purple-900 dark:via-gray-800 dark:to-indigo-900 from-purple-300 via-green-300 to-indigo-300">
+        <span className="bg-gradient-to-tr dark:from-purple-900 dark:via-gray-800 dark:to-indigo-900 from-purple-300 via-green-300 to-indigo-300 bg-clip-text text-transparent">
           Frameworks <br /> & other
         </span>{" "}
         Tools
       </h2>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center justify-center flex flex-col w-full">
-        <div className="flex flex-col items-center justify-center px-4 md:px-0 my-4">
-          {STACK_INFO.map((info, index) => (
+
+      {/* Center Content */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+        <div className="text-center space-y-3 md:space-y-5 px-6">
+          {STACK_INFO.map((text, i) => (
             <div
-              key={index}
-              className="stack-info hidden md:block h-10"
-              style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
+              key={i}
+              className="stack-info overflow-hidden"
+              style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
             >
-              <p className="relative translate-y-10 text-xl">{info}</p>
+              <p className="text-lg md:text-2xl lg:text-3xl font-medium  text-black dark:text-white ">
+                {text}
+              </p>
             </div>
           ))}
         </div>
 
-        <div className="btn">
-          <Button type="button" variant="primary">
-            <Grip />
+        <div className="mt-10 pointer-events-auto">
+          <Button type="button" variant="primary" >
+            <Grip className="w-6 h-6" />
           </Button>
         </div>
       </div>
+
+      {/* Cards Rows */}
       {generateRows()}
     </section>
   );

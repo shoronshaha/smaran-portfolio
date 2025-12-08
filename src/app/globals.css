@@ -53,6 +53,10 @@ body {
     text-align: center;
     overflow: hidden;
   }
+  /* globals.css or component styles */
+  .image-transition > div {
+    transition: opacity 0.8s ease-in-out;
+  }
 
   .annimate-border-btn::before {
     content: "";

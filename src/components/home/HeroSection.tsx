@@ -8,7 +8,7 @@ import { TypeAnimation } from "react-type-animation";
 const HeroSection = () => {
   return (
     <div className="padding-container max-container flex flex-col md:flex-row gap-4 items-center py-8 md:pt-20">
-      <div className="md:w-[50%] flex md:block flex-col items-center md:items-start justify-center text-center md:text-left">
+      <div className="md:w-1/2 flex md:block flex-col items-center md:items-start justify-center text-center md:text-left">
         <div className="flex items-end justify-end">
           <Image
             src="/hand.png"
@@ -37,20 +37,37 @@ const HeroSection = () => {
             className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
           />
         </div>
-        <Link
-          href="https://drive.google.com/file/d/1pKPUKW4jNPz3qv16HKFihUcrSb2SeUpZ/view?usp=sharing"
-          target="_blank"
-        >
-          <Button
-            type="button"
-            variant="gradient"
-            className="my-4 hover:animate-pulse hover:scale-105 transition-all duration-500"
+        <div className="flex gap-10">
+          <Link
+            href="https://drive.google.com/file/d/1pKPUKW4jNPz3qv16HKFihUcrSb2SeUpZ/view?usp=sharing"
+            target="_blank"
           >
-            Get My CV
-          </Button>
-        </Link>
+            <Button
+              type="button"
+              variant="gradient"
+              className="my-4 hover:animate-pulse hover:scale-105 transition-all duration-500"
+            >
+              Get My CV
+            </Button>
+
+          </Link>
+          <Link
+            href="https://drive.google.com/file/d/1dxk2_D3inyL6fkZBFVvmkRGEp_rG-D4A/view?usp=sharing"
+            target="_blank"
+          >
+            <Button
+              type="button"
+              variant="gradient"
+              className="my-4 hover:animate-pulse hover:scale-105 transition-all duration-500"
+            >
+              Get My Resume
+            </Button>
+          </Link>
+        </div>
+
       </div>
-      <div className="w-full md:w-[50%] bg-contain bg-no-repeat bg-center aspect-video bg-banner transition-all duration-500" />
+
+      <div className="w-full md:w-1/2 bg-contain bg-no-repeat bg-center aspect-video bg-banner transition-all duration-500" />
     </div>
   );
 };
