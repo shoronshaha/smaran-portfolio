@@ -111,9 +111,9 @@ export const PROJECTS: ProjectType[] = [
     description:
       "Developed a visually appealing and user-friendly shopping platform where users can explore products,view details,and add items to their cart. Fully mobile-responsive for a seamless experience",
     images: [
-      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168138/Screenshot_141_yklpbh.png",
-      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168140/Screenshot_142_plxbgb.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168137/Screenshot_143_cjt1vf.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168140/Screenshot_142_plxbgb.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168138/Screenshot_141_yklpbh.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168133/Screenshot_144_llkj7x.png",
     ],
     link: "https://azmainfashion.com/",

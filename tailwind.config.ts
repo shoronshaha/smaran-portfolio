@@ -9,14 +9,18 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        sm: "576px",
+        xl: "1200px",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        light_bg: "#f3f9fc"
+        light_bg: "#f3f9fc",
       },
       backgroundImage: {
-        "banner": "url('/display-dark.png')",
-      }
+        banner: "url('/display-dark.png')",
+      },
     },
   },
   plugins: [],

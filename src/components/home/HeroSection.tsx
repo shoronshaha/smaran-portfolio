@@ -19,10 +19,10 @@ const HeroSection = () => {
             quality={100}
           />
         </div>
-        <h4 className="text-3xl md:text-7xl dark:text-white text-black font-pacifico">
+        <h4 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl dark:text-white text-black font-pacifico">
           An incredible
         </h4>
-        <h1 className="text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r dark:from-orange-300 dark:via-purple-200 dark:to-blue-400 from-orange-900 via-purple-900 to-blue-900 font-semibold animate-gradient">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl bg-clip-text text-transparent bg-gradient-to-r dark:from-orange-300 dark:via-purple-200 dark:to-blue-400 from-orange-900 via-purple-900 to-blue-900 font-semibold animate-gradient">
           Software Engineer
         </h1>
         <div className="min-h-20 py-2">
@@ -34,7 +34,7 @@ const HeroSection = () => {
             wrapper="p"
             speed={80}
             style={{ display: "inline-block" }}
-            className=""
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
           />
         </div>
         <Link
@@ -50,7 +50,7 @@ const HeroSection = () => {
           </Button>
         </Link>
       </div>
-      <div className="w-full md:w-[50%] bg-contain bg-no-repeat bg-center h-[200px] md:h-[450px] bg-banner" />
+      <div className="w-full md:w-[50%] bg-contain bg-no-repeat bg-center aspect-video bg-banner transition-all duration-500" />
     </div>
   );
 };
