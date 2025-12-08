@@ -1,5 +1,4 @@
 "use client";
-import profile from "/public/profile.png";
 import { TypeAnimation } from "react-type-animation";
 import { useTheme } from "next-themes"; // Import for theme switching
 import { motion } from "framer-motion";
@@ -43,9 +42,9 @@ const About = () => {
 
   return (
     <section
-      className={`py-16 px-8 max-w-4xl mx-auto text-center rounded-2xl shadow-lg ${
-        theme === "dark" ? "bg-black text-white" : "bg-white text-black"
-      }`}
+      suppressHydrationWarning
+      className={`py-16 px-8 max-w-4xl mx-auto text-center rounded-2xl shadow-lg ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+        }`}
     >
       {/* About Title */}
       <motion.h2
@@ -65,19 +64,19 @@ const About = () => {
         className="flex justify-center mb-6"
       >
         <Image
-          src={profile} // Replace with your image path
+          src={"https://res.cloudinary.com/dck5iqtu3/image/upload/v1765177549/profile_g3cmjo.png"}
           alt="Profile Picture"
           width={180}
           height={180}
+          quality={100}
           className="rounded-full border-4 border-gray-700 shadow-xl"
         />
       </motion.div>
 
       {/* Description */}
       <p
-        className={`text-lg font-medium mb-6 max-w-2xl mx-auto ${
-          theme === "dark" ? "text-gray-300" : "text-gray-700"
-        }`}
+        className={`text-lg font-medium mb-6 max-w-2xl mx-auto ${theme === "dark" ? "text-gray-300" : "text-gray-700"
+          }`}
       >
         I am a Frontend Developer passionate about building intuitive, scalable,
         and high-performing web applications. With a strong foundation in UI
@@ -112,9 +111,8 @@ const About = () => {
         className="mt-10"
       >
         <h3
-          className={`text-3xl font-bold mb-6 ${
-            theme === "dark" ? "text-white" : "text-black"
-          }`}
+          className={`text-3xl font-bold mb-6 ${theme === "dark" ? "text-white" : "text-black"
+            }`}
         >
           Skills
         </h3>
@@ -151,9 +149,8 @@ const About = () => {
         className="mt-12"
       >
         <h3
-          className={`text-3xl font-bold mb-6 ${
-            theme === "dark" ? "text-white" : "text-black"
-          }`}
+          className={`text-3xl font-bold mb-6 ${theme === "dark" ? "text-white" : "text-black"
+            }`}
         >
           Education
         </h3>

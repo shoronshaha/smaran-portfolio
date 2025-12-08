@@ -16,6 +16,7 @@ const HeroSection = () => {
             width={60}
             className="hover:scale-125 dark:border-gray-900 border-gray-200 border p-2 rounded-full hover:-rotate-12 transition-all duration-500"
             height={60}
+            quality={100}
           />
         </div>
         <h4 className="text-3xl md:text-7xl dark:text-white text-black font-pacifico">
@@ -37,7 +38,7 @@ const HeroSection = () => {
           />
         </div>
         <Link
-          href="https://drive.google.com/file/d/1-ZN_L4FRibf8TwXGjwVw4YYeE7P4JyMB/view?usp=sharing"
+          href="https://drive.google.com/file/d/1pKPUKW4jNPz3qv16HKFihUcrSb2SeUpZ/view?usp=sharing"
           target="_blank"
         >
           <Button

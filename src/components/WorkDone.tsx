@@ -18,6 +18,7 @@ const WorkDone = () => {
         alt="works"
         width={100}
         height={100}
+        quality={100}
       />
     </div>
   );

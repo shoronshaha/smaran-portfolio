@@ -15,9 +15,8 @@ const Explore = ({ mobile }: { mobile?: boolean }) => {
       <Button
         type="button"
         variant="primary"
-        className={`${
-          mobile ? "md:hidden" : "hidden md:block"
-        } h-14 md:h-20 w-32 md:w-80 hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent`}
+        className={`${mobile ? "md:hidden" : "hidden md:block"
+          } h-14 md:h-20 w-32 md:w-80 hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent`}
       >
         Explore All
       </Button>
@@ -48,11 +47,11 @@ const ProjectSection = () => {
         <Explore />
       </div>
       <div className="hidden md:block">
-        <AnimatedProjects projects={projects} handleImage={handleImage} />
+        <AnimatedProjects projects={projects.slice(0, 6)} handleImage={handleImage} />
       </div>
       <div className="md:hidden">
         <UnanimatedProjects
-          projects={projects.slice(0, 3)}
+          projects={projects.slice(0, 6)}
           handleImage={handleImage}
         />
       </div>
