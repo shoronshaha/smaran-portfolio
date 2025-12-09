@@ -58,12 +58,12 @@ const UnanimatedProjects = ({ projects, handleImage }: Props) => {
         return (
           <div
             key={project.id}
-            className={`group px-1.5 md:px-4 flex flex-col md:flex-row ${index % 2 === 1 && "md:flex-row-reverse"
+            className={`group flex flex-col md:flex-row ${index % 2 === 1 && "md:flex-row-reverse"
               } gap-4 md:gap-10 my-16 md:my-20 md:items-center`}
           >
             {/* Text Part */}
             <div className={`w-full md:w-1/3 ${index % 2 === 1 ? "text-left" : "text-left md:text-right"}`}>
-              <h2 className="text-3xl md:text-5xl font-extrabold leading-tight break-all capitalize">
+              <h2 className="text-2xl md:text-4xl font-extrabold leading-tight break-all capitalize">
                 {project.title}
               </h2>
               <p className="mt-4 text-gray-600 dark:text-gray-300">{project.description}</p>
@@ -73,7 +73,6 @@ const UnanimatedProjects = ({ projects, handleImage }: Props) => {
                 </Link>
               </div>
             </div>
-
             {/* Image Part */}
             <div className="relative w-full md:w-2/3">
               <div className="relative overflow-hidden rounded-3xl shadow-2xl h-[220px] md:h-[340px] lg:h-[520px]">
@@ -123,7 +122,7 @@ const UnanimatedProjects = ({ projects, handleImage }: Props) => {
                               backgroundPosition: "center",
                             }}
                           >
-                            <div className="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                            {/* <div className="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" /> */}
                           </div>
                         </SwiperSlide>
                       ))}

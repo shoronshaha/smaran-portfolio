@@ -13,7 +13,7 @@ export const PROJECTS: ProjectType[] = [
     id: "420fd351-5fed-4e49-9628-4c7o621112134",
     title: "calquick saas",
     description:
-      "Built complete React 19 + TypeScript frontend for a cookieless server-side GTM platform that bypasses ad blockers and third-party cookie restrictions.Implemented multi-language support, RBAC, PII redaction, consent mode & GDPR compliance – currently serving thousands of users and agencies.",
+      "Designed and delivered a full-stack SaaS for e-commerce sellers, featuring a unified dashboard for online and in-store management. Built a hybrid order system with real-time sync, multi-store architecture, and integrated courier services with live tracking. Developed advanced inventory with variants, supplier ledger, expense tracking, and real-time profit analytics. Implemented subscription billing, theme customization, SMS notifications, and reusable media management.",
     images: [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765172199/Screenshot_171_dddwvq.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765171912/Screenshot_172_wuthy2.png",
@@ -53,7 +53,7 @@ export const PROJECTS: ProjectType[] = [
     id: "420fd351-5fed-4e49-9628-4c7t621116134",
     title: "pixlyOne sGTM",
     description:
-      "Engineered React 19 + TypeScript frontend for a cookieless server-side GTM platform with GDPR compliance, PII redaction & multi-language support – serving thousands of users.",
+      "Developed the complete frontend for PixlyOne, a privacy-first server-side tracking platform, using React 19, Vite, and TypeScript. Engineered a cookieless analytics solution that bypasses ad blockers and third-party cookie restrictions with built-in PII redaction and GDPR/CCPA compliance. Implemented a multi-language interface, role-based access control, and consent-mode support. The platform delivers high-performance Lighthouse scores and currently powers analytics for thousands of users and multiple agencies.",
     images: [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173257/Screenshot_210_kvrdi6.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173258/Screenshot_211_psbxsm.png",
@@ -72,7 +72,7 @@ export const PROJECTS: ProjectType[] = [
     id: "420fd351-5fed-4e49-9628-4c7i621112134",
     title: "emegadeal",
     description:
-      "Developed a visually appealing and user-friendly shopping platform where users can explore products,view details,and add items to their cart. Fully mobile-responsive for a seamless experience",
+      "Developed and led frontend architecture for multiple production e-commerce platforms using Next.js 15, focusing on high performance with Turbopack. Built key user features including infinite scrolling, dynamic filtering, and a seamless checkout process. Implemented SEO-optimized SSR and ISR with dynamic meta tags and sitemaps to boost organic traffic. Integrated advanced analytics via server-side Google Tag Manager for accurate, cookieless tracking and GDPR-compliant data collection.",
     images: [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765169342/Screenshot_145_x8l8px.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765169337/Screenshot_149_hmzefa.png",
@@ -91,7 +91,7 @@ export const PROJECTS: ProjectType[] = [
     id: "420fd351-5fed-4e49-9628-4c7a321112134",
     title: "glamgirl",
     description:
-      "Developed a visually appealing and user-friendly shopping platform where users can explore products,view details,and add items to their cart. Fully mobile-responsive for a seamless experience",
+      "Developed and led frontend architecture for multiple production e-commerce platforms using Next.js 15, focusing on high performance with Turbopack. Built key user features including infinite scrolling, dynamic filtering, and a seamless checkout process. Implemented SEO-optimized SSR and ISR with dynamic meta tags and sitemaps to boost organic traffic. Integrated advanced analytics via server-side Google Tag Manager for accurate, cookieless tracking and GDPR-compliant data collection.",
     images: [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765169773/Screenshot_160_iodnwa.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765169764/Screenshot_155_feihdy.png",
@@ -109,7 +109,7 @@ export const PROJECTS: ProjectType[] = [
     id: "420fd351-5fed-4e49-9628-4c7k32117654",
     title: "Azmainfashion",
     description:
-      "Developed a visually appealing and user-friendly shopping platform where users can explore products,view details,and add items to their cart. Fully mobile-responsive for a seamless experience",
+      "Developed and led frontend architecture for multiple production e-commerce platforms using Next.js 15, focusing on high performance with Turbopack. Built key user features including infinite scrolling, dynamic filtering, and a seamless checkout process. Implemented SEO-optimized SSR and ISR with dynamic meta tags and sitemaps to boost organic traffic. Integrated advanced analytics via server-side Google Tag Manager for accurate, cookieless tracking and GDPR-compliant data collection.",
     images: [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168138/Screenshot_141_yklpbh.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168133/Screenshot_144_llkj7x.png",
@@ -124,7 +124,7 @@ export const PROJECTS: ProjectType[] = [
     id: "420fd351-5fed-4e49-9628-4dea32117654",
     title: "Attireidyll",
     description:
-      "Developed a visually appealing and user-friendly shopping platform where users can explore products,view details,and add items to their cart. Fully mobile-responsive for a seamless experience",
+      "Developed and led frontend architecture for multiple production e-commerce platforms using Next.js 15, focusing on high performance with Turbopack. Built key user features including infinite scrolling, dynamic filtering, and a seamless checkout process. Implemented SEO-optimized SSR and ISR with dynamic meta tags and sitemaps to boost organic traffic. Integrated advanced analytics via server-side Google Tag Manager for accurate, cookieless tracking and GDPR-compliant data collection.",
     images: [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765170985/Screenshot_168_h0dxqb.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765170985/Screenshot_167_eoewg8.png",
