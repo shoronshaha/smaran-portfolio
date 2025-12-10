@@ -59,7 +59,7 @@ const UnanimatedProjects = ({ projects, handleImage }: Props) => {
           <div
             key={project.id}
             className={`group flex flex-col md:flex-row ${index % 2 === 1 && "md:flex-row-reverse"
-              } gap-4 md:gap-10 my-16 md:my-20 md:items-center`}
+              } gap-4 md:gap-10 my-16 md:my-20 md:items-center px-2 md:px-0`}
           >
             {/* Text Part */}
             <div className={`w-full md:w-1/3 ${index % 2 === 1 ? "text-left" : "text-left md:text-right"}`}>

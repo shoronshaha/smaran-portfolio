@@ -45,7 +45,7 @@ const HeroSection = () => {
             <Button
               type="button"
               variant="gradient"
-              className="my-4 hover:animate-pulse hover:scale-105 transition-all duration-500"
+              className="my-4 hover:animate-pulse hover:scale-105 transition-all duration-500 text-sm md:text-lg"
             >
               Get My CV
             </Button>
@@ -58,7 +58,7 @@ const HeroSection = () => {
             <Button
               type="button"
               variant="gradient"
-              className="my-4 hover:animate-pulse hover:scale-105 transition-all duration-500"
+              className="my-4 hover:animate-pulse hover:scale-105 transition-all duration-500 text-sm md:text-lg"
             >
               Get My Resume
             </Button>
