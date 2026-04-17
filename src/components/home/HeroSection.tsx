@@ -19,16 +19,16 @@ const HeroSection = () => {
             quality={100}
           />
         </div>
-        <h4 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl dark:text-white text-black font-pacifico">
+        <h4 className="text-2xl  md:text-3xl lg:text-4xl xl:text-5xl dark:text-white text-black font-pacifico">
           An incredible
         </h4>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl bg-clip-text text-transparent bg-gradient-to-r dark:from-orange-300 dark:via-purple-200 dark:to-blue-400 from-orange-900 via-purple-900 to-blue-900 font-semibold animate-gradient">
-          Software Engineer
+        <h1 className="ext-2xl  md:text-3xl lg:text-4xl xl:text-5xl bg-clip-text text-transparent bg-gradient-to-r dark:from-orange-300 dark:via-purple-200 dark:to-blue-400 from-orange-900 via-purple-900 to-blue-900 font-semibold animate-gradient">
+          Full Stack Software Developer
         </h1>
         <div className="min-h-20 py-2">
           <TypeAnimation
             sequence={[
-              "Hi 👋, my name is Smaran Shaha and I am a Software Engineer, passionate about solving complex problems and building innovative products that benefit humanity.",
+              "Hi 👋, my name is Smaran Shaha and I am a Full Stack Software Developer, passionate about solving complex problems and building innovative products that benefit humanity.",
               1000,
             ]}
             wrapper="p"

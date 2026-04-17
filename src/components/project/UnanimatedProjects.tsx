@@ -24,6 +24,8 @@ type Props = {
 const UnanimatedProjects = ({ projects, handleImage }: Props) => {
   // State to track current main image index for each project
   const [currentImageIndices, setCurrentImageIndices] = useState<Record<string, number>>({});
+  const [nextImageIndices, setNextImageIndices] = useState<Record<string, number>>({});
+  const [fadeTriggers, setFadeTriggers] = useState<Record<string, boolean>>({});
 
   // Initialize and auto-rotate
   useEffect(() => {
@@ -35,15 +37,37 @@ const UnanimatedProjects = ({ projects, handleImage }: Props) => {
 
     // Auto-rotate every 4 seconds
     const interval = setInterval(() => {
-      setCurrentImageIndices((prev) => {
-        const next = { ...prev };
-        projects.forEach((project) => {
-          const current = next[project.id] ?? project.default_image_index;
-          const nextIndex = (current + 1) % project.images.length;
-          next[project.id] = nextIndex;
-        });
-        return next;
+      const nextIndices: Record<string, number> = {};
+      projects.forEach((project) => {
+        const current = currentImageIndices[project.id] ?? project.default_image_index;
+        const nextIndex = (current + 1) % project.images.length;
+        nextIndices[project.id] = nextIndex;
       });
+      setNextImageIndices(nextIndices);
+      setFadeTriggers((prev) => {
+        const triggers = { ...prev };
+        projects.forEach((project) => {
+          triggers[project.id] = true;
+        });
+        return triggers;
+      });
+      // After transition, update current
+      setTimeout(() => {
+        setCurrentImageIndices((prev) => {
+          const updated = { ...prev };
+          Object.keys(nextIndices).forEach((id) => {
+            updated[id] = nextIndices[id];
+          });
+          return updated;
+        });
+        setFadeTriggers((prev) => {
+          const triggers = { ...prev };
+          projects.forEach((project) => {
+            triggers[project.id] = false;
+          });
+          return triggers;
+        });
+      }, 1000);
     }, 4000); // Change image every 4 seconds
 
     return () => clearInterval(interval);
@@ -54,6 +78,9 @@ const UnanimatedProjects = ({ projects, handleImage }: Props) => {
       {projects.map((project, index) => {
         const currentImgIndex = currentImageIndices[project.id] ?? project.default_image_index;
         const currentImgSrc = project.images[currentImgIndex];
+        const nextImgIndex = nextImageIndices[project.id] ?? currentImgIndex;
+        const isFading = fadeTriggers[project.id] ?? false;
+        const nextImgSrc = project.images[nextImgIndex];
 
         return (
           <div
@@ -78,12 +105,20 @@ const UnanimatedProjects = ({ projects, handleImage }: Props) => {
               <div className="relative overflow-hidden rounded-3xl shadow-2xl h-[220px] md:h-[340px] lg:h-[520px]">
                 {/* AUTO-ROTATING MAIN IMAGE */}
                 <Image
-                  key={currentImgSrc} // ← Forces re-render + smooth transition
                   src={currentImgSrc}
                   alt={project.title}
                   fill
                   quality={100}
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className={`absolute inset-0 object-cover transition-opacity duration-1000 ${isFading ? 'opacity-0' : 'opacity-100'} group-hover:scale-105`}
+                  priority={index === 0}
+                  sizes="(max-width: 768px) 100vw, 70vw"
+                />
+                <Image
+                  src={nextImgSrc}
+                  alt={project.title}
+                  fill
+                  quality={100}
+                  className={`absolute inset-0 object-cover transition-opacity duration-1000 ${isFading ? 'opacity-100' : 'opacity-0'} group-hover:scale-105`}
                   priority={index === 0}
                   sizes="(max-width: 768px) 100vw, 70vw"
                 />
