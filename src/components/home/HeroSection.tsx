@@ -23,7 +23,7 @@ const HeroSection = () => {
           An incredible
         </h4>
         <h1 className="ext-2xl  md:text-3xl lg:text-4xl xl:text-5xl bg-clip-text text-transparent bg-gradient-to-r dark:from-orange-300 dark:via-purple-200 dark:to-blue-400 from-orange-900 via-purple-900 to-blue-900 font-semibold animate-gradient">
-          Full Stack Software Developer
+          Full Stack Software Developer.
         </h1>
         <div className="min-h-20 py-2">
           <TypeAnimation
