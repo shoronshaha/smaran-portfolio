@@ -39,7 +39,7 @@ const HeroSection = () => {
         </div>
         <div className="flex gap-10">
           <Link
-            href="https://drive.google.com/file/d/1pKPUKW4jNPz3qv16HKFihUcrSb2SeUpZ/view?usp=sharing"
+            href="https://drive.google.com/file/d/1buHPylZwN1l_eJ3YNfVrsT4ODm-Q-zY2/view?usp=sharing"
             target="_blank"
           >
             <Button
@@ -52,7 +52,7 @@ const HeroSection = () => {
 
           </Link>
           <Link
-            href="https://drive.google.com/file/d/1buHPylZwN1l_eJ3YNfVrsT4ODm-Q-zY2/view?usp=sharing"
+            href="https://drive.google.com/file/d/1dxk2_D3inyL6fkZBFVvmkRGEp_rG-D4A/view?usp=sharing"
             target="_blank"
           >
             <Button
