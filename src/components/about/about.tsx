@@ -75,8 +75,8 @@ const projectHighlights = [
     description: "Multi-tenant SaaS platform powering multiple live businesses with store management and e-commerce."
   },
   {
-    name: "Omnichannel Customer Engagement",
-    url: "#",
+    name: "OmniChat SaaS",
+    url: "https://omnichat.expressitbd.com/",
     description: "Scalable SaaS integrating Facebook, WhatsApp, TikTok, Telegram, and Instagram into a single unified inbox."
   },
   {
@@ -119,10 +119,10 @@ const About = () => {
   return (
     <section
       suppressHydrationWarning
-      className={`py-20 px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto rounded-3xl shadow-2xl overflow-hidden transition-colors duration-500 ${
+      className={`py-20 px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto rounded-[3rem] shadow-2xl overflow-hidden transition-all duration-500 border ${
         theme === "dark" 
-          ? "bg-black/40 backdrop-blur-md border border-white/10 text-white" 
-          : "bg-white/80 backdrop-blur-md border border-black/5 text-black"
+          ? "bg-black/60 backdrop-blur-2xl border-white/10 text-white" 
+          : "bg-white/90 backdrop-blur-2xl border-black/5 text-zinc-900 shadow-xl"
       }`}
     >
       {/* Header Section */}
@@ -162,13 +162,13 @@ const About = () => {
           <div className="mt-8 text-center">
              <TypeAnimation
               sequence={[
-                "Full Stack Developer",
+                "Global Remote Developer",
                 2000,
-                "Next.js Architect",
+                "Full Stack Architect",
                 2000,
-                "Backend Specialist",
+                "Next.js Specialist",
                 2000,
-                "Performance Engineer",
+                "Backend Engineer",
                 2000,
               ]}
               wrapper="span"
@@ -177,7 +177,7 @@ const About = () => {
               className="text-2xl font-bold text-cyan-400"
             />
             <p className={`mt-4 text-sm font-medium uppercase tracking-widest ${theme === "dark" ? "text-gray-400" : "text-gray-500"}`}>
-               Dhaka, Bangladesh
+               Available for Global Remote & Relocation
             </p>
 
             {/* Social Links Highlight */}
@@ -238,27 +238,71 @@ const About = () => {
           viewport={{ once: true }}
           className="lg:col-span-8"
         >
-          <h3 className="text-3xl font-bold mb-6">Results-driven Full Stack Developer</h3>
-          <p className={`text-lg leading-relaxed mb-8 ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
-            I am a specialized developer with production-level expertise in architecting scalable applications within modern JavaScript/TypeScript ecosystems. With over a year of experience at <span className="text-cyan-400 font-bold">ExpressItBD</span>, I have successfully delivered high-impact platforms including multi-tenant SaaS architectures, complex e-commerce systems, and advanced data-tracking infrastructures.
+          <h3 className="text-4xl md:text-5xl font-black mb-8 tracking-tighter italic">Architecting Solutions for the <span className="text-cyan-500">Global Market</span></h3>
+          <p className={`text-xl leading-relaxed mb-8 font-medium ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
+            I am a specialized <span className={`${theme === 'dark' ? 'text-white' : 'text-black'} font-black underline decoration-cyan-500 decoration-4 underline-offset-4`}>Full Stack Architect</span> dedicated to engineering mission-critical, highly scalable applications for an international audience. I excel in high-trust, **remote-first environments**, delivering elite-level software that bridges the gap between complex backend architectures and seamless user experiences.
           </p>
-          <p className={`text-lg leading-relaxed ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
-            My approach focuses on achieving sub-second load times and integrating robust analytics for data-driven growth. I specialize in <span className="font-semibold underline decoration-cyan-500/50">Next.js (App Router)</span>, <span className="font-semibold underline decoration-purple-500/50">Node.js/NestJS</span>, and <span className="font-semibold underline decoration-orange-500/50">Cloud Native architectures</span>.
-          </p>
+          
+          {/* Elite Backend Core Segment */}
+          <div className="mb-12">
+            <div className="flex items-center gap-2 mb-6">
+               <span className="h-[2px] w-8 bg-cyan-500" />
+               <span className="text-xs font-black uppercase tracking-[0.3em] text-cyan-500">Backend Core Expertise</span>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+               {[
+                 { name: "NestJS", desc: "Enterprise Scalability", color: "text-red-500", glow: "hover:shadow-[0_0_15px_rgba(239,68,68,0.2)]" },
+                 { name: "ExpressJS", desc: "High-Performance APIs", color: "text-gray-400", glow: "hover:shadow-[0_0_15px_rgba(156,163,175,0.2)]" },
+                 { name: "GraphQL", desc: "Type-Safe Data", color: "text-pink-500", glow: "hover:shadow-[0_0_15px_rgba(236,72,153,0.2)]" },
+                 { name: "REST APIs", desc: "Clean & Robust", color: "text-cyan-400", glow: "hover:shadow-[0_0_15px_rgba(34,211,238,0.2)]" },
+                 { name: "PostgreSQL", desc: "Relational Prowess", color: "text-blue-400", glow: "hover:shadow-[0_0_15px_rgba(96,165,250,0.2)]" },
+                 { name: "MongoDB", desc: "NoSQL Architecting", color: "text-green-500", glow: "hover:shadow-[0_0_15px_rgba(34,197,94,0.2)]" }
+               ].map((tech) => (
+                 <motion.div 
+                    key={tech.name}
+                    whileHover={{ y: -5 }}
+                    className={`p-4 rounded-2xl bg-white/5 dark:bg-black/40 border border-white/10 transition-all duration-300 ${tech.glow} group cursor-default`}
+                 >
+                    <p className={`text-lg font-black tracking-tight ${tech.color}`}>{tech.name}</p>
+                    <p className="text-[10px] uppercase font-bold text-gray-500 group-hover:text-gray-300 transition-colors">{tech.desc}</p>
+                 </motion.div>
+               ))}
+            </div>
+          </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-10">
-            <div className={`p-4 rounded-2xl ${theme === 'dark' ? 'bg-white/5' : 'bg-black/5'} border border-white/10`}>
-              <p className="text-3xl font-black text-cyan-400">1.5+</p>
-              <p className="text-xs uppercase tracking-tighter opacity-60 font-bold">Years Experience</p>
-            </div>
-            <div className={`p-4 rounded-2xl ${theme === 'dark' ? 'bg-white/5' : 'bg-black/5'} border border-white/10`}>
-              <p className="text-3xl font-black text-indigo-400">8+</p>
-              <p className="text-xs uppercase tracking-tighter opacity-60 font-bold">Live Projects</p>
-            </div>
-            <div className={`p-4 rounded-2xl ${theme === 'dark' ? 'bg-white/5' : 'bg-black/5'} border border-white/10`}>
-              <p className="text-3xl font-black text-purple-400">4+</p>
-              <p className="text-xs uppercase tracking-tighter opacity-60 font-bold">SaaS Applications</p>
-            </div>
+          <div className="flex flex-wrap gap-4 mt-6">
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className={`flex-1 min-w-[200px] p-6 rounded-3xl bg-gradient-to-br from-cyan-500/10 to-transparent border border-cyan-500/20 shadow-[0_4px_20px_rgba(6,182,212,0.1)] relative overflow-hidden group`}
+            >
+              <div className="relative z-10">
+                <p className="text-5xl font-black text-cyan-500 tracking-tighter">1.5+</p>
+                <p className="text-xs uppercase tracking-widest font-black text-gray-400 mt-1">Years Experience</p>
+              </div>
+              <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/10 transition-colors" />
+            </motion.div>
+
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className={`flex-1 min-w-[200px] p-6 rounded-3xl bg-gradient-to-br from-indigo-500/10 to-transparent border border-indigo-500/20 shadow-[0_4px_20px_rgba(99,102,241,0.1)] relative overflow-hidden group`}
+            >
+              <div className="relative z-10">
+                <p className="text-5xl font-black text-indigo-500 tracking-tighter">8+</p>
+                <p className="text-xs uppercase tracking-widest font-black text-gray-400 mt-1">Live Projects</p>
+              </div>
+               <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-indigo-500/5 rounded-full blur-2xl group-hover:bg-indigo-500/10 transition-colors" />
+            </motion.div>
+
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className={`flex-1 min-w-[200px] p-6 rounded-3xl bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20 shadow-[0_4px_20px_rgba(168,85,247,0.1)] relative overflow-hidden group`}
+            >
+              <div className="relative z-10">
+                <p className="text-5xl font-black text-purple-500 tracking-tighter">4+</p>
+                <p className="text-xs uppercase tracking-widest font-black text-gray-400 mt-1">SaaS Applications</p>
+              </div>
+              <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-purple-500/5 rounded-full blur-2xl group-hover:bg-purple-500/10 transition-colors" />
+            </motion.div>
           </div>
         </motion.div>
       </div>
@@ -360,7 +404,7 @@ const About = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className={`p-6 rounded-3xl ${theme === 'dark' ? 'bg-white/5' : 'bg-black/5'} border border-white/10 group hover:border-cyan-500/50 transition-all duration-300 flex flex-col`}
+              className={`p-6 rounded-3xl ${theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-black/5 border-black/10'} group hover:border-cyan-500/50 transition-all duration-300 flex flex-col`}
             >
               <h4 className="text-xl font-bold mb-3">{project.name}</h4>
               <p className="text-sm opacity-70 mb-6 flex-grow">{project.description}</p>

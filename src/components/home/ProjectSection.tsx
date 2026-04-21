@@ -47,11 +47,11 @@ const ProjectSection = () => {
         <Explore />
       </div>
       {/* <div className="hidden md:block">
-        <AnimatedProjects projects={projects.slice(0, 6)} handleImage={handleImage} />
+        <AnimatedProjects projects={projects.slice(0, 8)} handleImage={handleImage} />
       </div> */}
       <div className="">
         <UnanimatedProjects
-          projects={projects.slice(0, 6)}
+          projects={projects.slice(0, 8)}
           handleImage={handleImage}
         />
       </div>

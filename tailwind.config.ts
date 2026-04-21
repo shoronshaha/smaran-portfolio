@@ -16,7 +16,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        light_bg: "#f3f9fc",
+        light_bg: "#fafafa",
       },
       backgroundImage: {
         banner: "url('/display-dark.png')",
