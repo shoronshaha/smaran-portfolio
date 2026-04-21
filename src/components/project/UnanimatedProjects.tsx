@@ -3,6 +3,9 @@ import Link from "next/link";
 import { Fragment, useState, useEffect } from "react"; // ← Add useState & useEffect
 import Button from "../Button";
 import Image from "next/image";
+import { User, Lock, Maximize2 } from "lucide-react";
+import { useTheme } from "next-themes";
+import { optimizeCloudinary } from "@/utils/cloudinary";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, FreeMode } from 'swiper/modules';
 import 'swiper/css';
@@ -22,6 +25,7 @@ type Props = {
 };
 
 const UnanimatedProjects = ({ projects, handleImage }: Props) => {
+  const { theme } = useTheme();
   // State to track current main image index for each project
   const [currentImageIndices, setCurrentImageIndices] = useState<Record<string, number>>({});
   const [nextImageIndices, setNextImageIndices] = useState<Record<string, number>>({});
@@ -94,6 +98,22 @@ const UnanimatedProjects = ({ projects, handleImage }: Props) => {
                 {project.title}
               </h2>
               <p className="mt-4 text-gray-600 dark:text-gray-300">{project.description}</p>
+              
+              {project.demo_id && (
+                <div className={`mt-6 p-4 rounded-2xl border ${theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-black/5 border-black/5'} inline-block`}>
+                  <div className={`flex items-center gap-3 mb-2 text-sm ${index % 2 === 1 ? 'justify-start' : 'justify-start md:justify-end'}`}>
+                    <User className="w-4 h-4 text-cyan-400" />
+                    <span className="font-semibold opacity-70 italic">ID:</span>
+                    <span className="font-mono text-cyan-500">{project.demo_id}</span>
+                  </div>
+                  <div className={`flex items-center gap-3 text-sm ${index % 2 === 1 ? 'justify-start' : 'justify-start md:justify-end'}`}>
+                    <Lock className="w-4 h-4 text-purple-400" />
+                    <span className="font-semibold opacity-70 italic">Pass:</span>
+                    <span className="font-mono text-purple-500">{project.demo_pass}</span>
+                  </div>
+                </div>
+              )}
+
               <div className={`flex mt-6 ${index % 2 === 1 ? "justify-start" : "justify-start md:justify-end"}`}>
                 <Link href={project.link} target="_blank" rel="noopener">
                   <Button variant="primary" type="button">View Project</Button>
@@ -104,24 +124,48 @@ const UnanimatedProjects = ({ projects, handleImage }: Props) => {
             <div className="relative w-full md:w-2/3">
               <div className="relative overflow-hidden rounded-3xl shadow-2xl h-[220px] md:h-[340px] lg:h-[520px]">
                 {/* AUTO-ROTATING MAIN IMAGE */}
-                <Image
-                  src={currentImgSrc}
-                  alt={project.title}
-                  fill
-                  quality={100}
-                  className={`absolute inset-0 object-cover transition-opacity duration-1000 ${isFading ? 'opacity-0' : 'opacity-100'} group-hover:scale-105`}
-                  priority={index === 0}
-                  sizes="(max-width: 768px) 100vw, 70vw"
-                />
-                <Image
-                  src={nextImgSrc}
-                  alt={project.title}
-                  fill
-                  quality={100}
-                  className={`absolute inset-0 object-cover transition-opacity duration-1000 ${isFading ? 'opacity-100' : 'opacity-0'} group-hover:scale-105`}
-                  priority={index === 0}
-                  sizes="(max-width: 768px) 100vw, 70vw"
-                />
+                <Link 
+                   href={optimizeCloudinary(currentImgSrc)} 
+                   target="_blank" 
+                   className="group/zoom relative block w-full h-full overflow-hidden"
+                >
+                  <Image
+                    src={optimizeCloudinary(currentImgSrc)}
+                    alt={project.title}
+                    fill
+                    quality={100}
+                    className={`absolute inset-0 object-cover transition-opacity duration-1000 ${isFading ? 'opacity-0' : 'opacity-100'} group-hover/zoom:scale-105`}
+                    priority={index === 0}
+                    unoptimized={true}
+                    sizes="(max-width: 768px) 100vw, 70vw"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover/zoom:opacity-100 transition-all duration-500 backdrop-blur-[2px]">
+                    <div className="p-5 rounded-full bg-white/10 border border-white/20 shadow-2xl transform scale-50 group-hover/zoom:scale-100 transition-transform duration-500 ease-out">
+                        <Maximize2 className="w-12 h-12 text-white drop-shadow-lg" />
+                    </div>
+                  </div>
+                </Link>
+                <Link 
+                   href={optimizeCloudinary(nextImgSrc)} 
+                   target="_blank" 
+                   className="group/zoom relative block w-full h-full overflow-hidden"
+                >
+                  <Image
+                    src={optimizeCloudinary(nextImgSrc)}
+                    alt={project.title}
+                    fill
+                    quality={100}
+                    className={`absolute inset-0 object-cover transition-opacity duration-1000 ${isFading ? 'opacity-100' : 'opacity-0'} group-hover/zoom:scale-105`}
+                    priority={index === 0}
+                    unoptimized={true}
+                    sizes="(max-width: 768px) 100vw, 70vw"
+                  />
+                   <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover/zoom:opacity-100 transition-all duration-500 backdrop-blur-[2px]">
+                    <div className="p-5 rounded-full bg-white/10 border border-white/20 shadow-2xl transform scale-50 group-hover/zoom:scale-100 transition-transform duration-500 ease-out">
+                        <Maximize2 className="w-12 h-12 text-white drop-shadow-lg" />
+                    </div>
+                  </div>
+                </Link>
 
                 {/* Desktop Hover Slider (unchanged) */}
                 <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
@@ -152,7 +196,7 @@ const UnanimatedProjects = ({ projects, handleImage }: Props) => {
                             className={`relative w-full h-full rounded-2xl overflow-hidden border-4 transition-all duration-300 hover:scale-110 hover:border-cyan-400 shadow-2xl cursor-pointer
                               ${imgIndex === currentImgIndex ? "border-cyan-400 ring-4 ring-cyan-400/50" : "border-white/30"}`}
                             style={{
-                              backgroundImage: `url(${img})`,
+                              backgroundImage: `url(${optimizeCloudinary(img)})`,
                               backgroundSize: "cover",
                               backgroundPosition: "center",
                             }}
@@ -185,7 +229,7 @@ const UnanimatedProjects = ({ projects, handleImage }: Props) => {
                         className={`aspect-square rounded-3xl border-4 overflow-hidden shadow-lg transition-all
                           ${imgIndex === currentImgIndex ? "border-cyan-400 ring-4 ring-cyan-400/50" : "border-cyan-300/50"}`}
                         style={{
-                          backgroundImage: `url(${img})`,
+                          backgroundImage: `url(${optimizeCloudinary(img)})`,
                           backgroundSize: "cover",
                           backgroundPosition: "center",
                         }}

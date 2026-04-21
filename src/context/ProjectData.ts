@@ -6,6 +6,8 @@ export type ProjectType = {
   link: string;
   github_link?: string;
   default_image_index: number;
+  demo_id?: string;
+  demo_pass?: string;
 };
 
 export const PROJECTS: ProjectType[] = [
@@ -30,6 +32,52 @@ export const PROJECTS: ProjectType[] = [
     link: "https://calquick.app/",
     github_link: "",
     default_image_index: 0,
+    demo_id: "demo@gmail.com",
+    demo_pass: "Pa$$w0rd!",
+  },
+  {
+    id: "420fd351-5fed-4e49-9628-4c7o621252134",
+    title: "OmniChat saas",
+    description:
+      "Developed a scalable, multi-tenant Omnichannel SaaS platform unifying Facebook, WhatsApp, TikTok, Telegram, and Instagram messages. Engineered a high-performance backend using Node.js, Express.js, and MongoDB for real-time routing, paired with a Next.js and WebSocket-powered frontend dashboard that enables support agents to manage thousands of live conversations instantly.",
+    images: [
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1776764868/Screenshot_2026-04-21_154515_rhm1tc.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1776764867/Screenshot_2026-04-21_154535_xfeoqo.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1776764868/Screenshot_2026-04-21_154444_alsebq.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1776764868/Screenshot_2026-04-21_154402_z2wrao.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1776764869/Screenshot_2026-04-21_154656_xj5nny.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1776764867/Screenshot_2026-04-21_154623_seofrq.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1776764867/Screenshot_2026-04-21_154640_o3culj.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1776764867/Screenshot_2026-04-21_154602_ibn2og.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1776764867/Screenshot_2026-04-21_154715_sippwt.png",
+    
+    ],
+    link: "https://omnichat.expressitbd.com/",
+    github_link: "",
+    default_image_index: 0,
+    demo_id: "ceo@gmail.com",
+    demo_pass: "123456",
+  },
+    {
+    id: "420fd351-5fed-4e49-9628-4c7t621116134",
+    title: "pixlyOne sGTM",
+    description:
+      "Developed the complete frontend for PixlyOne, a privacy-first server-side tracking platform, using Frontend React 19, Vite, and TypeScript & Backend Nest.js, PostgreSQL. Engineered a cookieless analytics solution that bypasses ad blockers and third-party cookie restrictions with built-in PII redaction and GDPR/CCPA compliance. Implemented a multi-language interface, role-based access control, and consent-mode support. The platform delivers high-performance Lighthouse scores and currently powers analytics for thousands of users and multiple agencies.",
+    images: [
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173257/Screenshot_210_kvrdi6.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173258/Screenshot_211_psbxsm.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173259/Screenshot_212_ll1evr.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173294/Screenshot_214_foj4ot.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173294/Screenshot_216_jgm7s5.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173293/Screenshot_215_lfftek.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173299/Screenshot_218_prlbzb.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173303/Screenshot_219_qfz9ae.png",
+    ],
+    link: "https://pixlyone.io/",
+    github_link: "",
+    default_image_index: 0,
+    demo_id: "smaranshaha@gmail.com",
+    demo_pass: "Shaha@1201",
   },
   {
     id: "420fd351-5fed-4e49-9628-4c7u621116134",
@@ -48,31 +96,14 @@ export const PROJECTS: ProjectType[] = [
     link: "https://hisabi-pi.vercel.app/",
     github_link: "",
     default_image_index: 0,
+    
   },
-  {
-    id: "420fd351-5fed-4e49-9628-4c7t621116134",
-    title: "pixlyOne sGTM",
-    description:
-      "Developed the complete frontend for PixlyOne, a privacy-first server-side tracking platform, using React 19, Vite, and TypeScript. Engineered a cookieless analytics solution that bypasses ad blockers and third-party cookie restrictions with built-in PII redaction and GDPR/CCPA compliance. Implemented a multi-language interface, role-based access control, and consent-mode support. The platform delivers high-performance Lighthouse scores and currently powers analytics for thousands of users and multiple agencies.",
-    images: [
-      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173257/Screenshot_210_kvrdi6.png",
-      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173258/Screenshot_211_psbxsm.png",
-      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173259/Screenshot_212_ll1evr.png",
-      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173294/Screenshot_214_foj4ot.png",
-      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173294/Screenshot_216_jgm7s5.png",
-      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173293/Screenshot_215_lfftek.png",
-      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173299/Screenshot_218_prlbzb.png",
-      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765173303/Screenshot_219_qfz9ae.png",
-    ],
-    link: "https://pixlyone.io/",
-    github_link: "",
-    default_image_index: 0,
-  },
+
   {
     id: "420fd351-5fed-4e49-9628-4c7i621112134",
     title: "emegadeal",
     description:
-      "Developed and led frontend architecture for multiple production e-commerce platforms using Next.js 15, focusing on high performance with Turbopack. Built key user features including infinite scrolling, dynamic filtering, and a seamless checkout process. Implemented SEO-optimized SSR and ISR with dynamic meta tags and sitemaps to boost organic traffic. Integrated advanced analytics via server-side Google Tag Manager for accurate, cookieless tracking and GDPR-compliant data collection.",
+      "Developed and led frontend architecture for multiple production e-commerce platforms using Next.js, focusing on high performance with Turbopack. Built key user features including infinite scrolling, dynamic filtering, and a seamless checkout process. Implemented SEO-optimized SSR and ISR with dynamic meta tags and sitemaps to boost organic traffic. Integrated advanced analytics via server-side Google Tag Manager for accurate, cookieless tracking and GDPR-compliant data collection.",
     images: [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765169342/Screenshot_145_x8l8px.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765169337/Screenshot_149_hmzefa.png",
@@ -91,7 +122,7 @@ export const PROJECTS: ProjectType[] = [
     id: "420fd351-5fed-4e49-9628-4c7a321112134",
     title: "glamgirl",
     description:
-      "Developed and led frontend architecture for multiple production e-commerce platforms using Next.js 15, focusing on high performance with Turbopack. Built key user features including infinite scrolling, dynamic filtering, and a seamless checkout process. Implemented SEO-optimized SSR and ISR with dynamic meta tags and sitemaps to boost organic traffic. Integrated advanced analytics via server-side Google Tag Manager for accurate, cookieless tracking and GDPR-compliant data collection.",
+      "Developed and led frontend architecture for multiple production e-commerce platforms using Next.js, focusing on high performance with Turbopack. Built key user features including infinite scrolling, dynamic filtering, and a seamless checkout process. Implemented SEO-optimized SSR and ISR with dynamic meta tags and sitemaps to boost organic traffic. Integrated advanced analytics via server-side Google Tag Manager for accurate, cookieless tracking and GDPR-compliant data collection.",
     images: [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765169773/Screenshot_160_iodnwa.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765169764/Screenshot_155_feihdy.png",
@@ -109,7 +140,7 @@ export const PROJECTS: ProjectType[] = [
     id: "420fd351-5fed-4e49-9628-4c7k32117654",
     title: "Azmainfashion",
     description:
-      "Developed and led frontend architecture for multiple production e-commerce platforms using Next.js 15, focusing on high performance with Turbopack. Built key user features including infinite scrolling, dynamic filtering, and a seamless checkout process. Implemented SEO-optimized SSR and ISR with dynamic meta tags and sitemaps to boost organic traffic. Integrated advanced analytics via server-side Google Tag Manager for accurate, cookieless tracking and GDPR-compliant data collection.",
+      "Developed and led frontend architecture for multiple production e-commerce platforms using Next.js, focusing on high performance with Turbopack. Built key user features including infinite scrolling, dynamic filtering, and a seamless checkout process. Implemented SEO-optimized SSR and ISR with dynamic meta tags and sitemaps to boost organic traffic. Integrated advanced analytics via server-side Google Tag Manager for accurate, cookieless tracking and GDPR-compliant data collection.",
     images: [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168138/Screenshot_141_yklpbh.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765168133/Screenshot_144_llkj7x.png",
@@ -124,7 +155,7 @@ export const PROJECTS: ProjectType[] = [
     id: "420fd351-5fed-4e49-9628-4dea32117654",
     title: "Attireidyll",
     description:
-      "Developed and led frontend architecture for multiple production e-commerce platforms using Next.js 15, focusing on high performance with Turbopack. Built key user features including infinite scrolling, dynamic filtering, and a seamless checkout process. Implemented SEO-optimized SSR and ISR with dynamic meta tags and sitemaps to boost organic traffic. Integrated advanced analytics via server-side Google Tag Manager for accurate, cookieless tracking and GDPR-compliant data collection.",
+      "Developed and led frontend architecture for multiple production e-commerce platforms using Next.js, focusing on high performance with Turbopack. Built key user features including infinite scrolling, dynamic filtering, and a seamless checkout process. Implemented SEO-optimized SSR and ISR with dynamic meta tags and sitemaps to boost organic traffic. Integrated advanced analytics via server-side Google Tag Manager for accurate, cookieless tracking and GDPR-compliant data collection.",
     images: [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765170985/Screenshot_168_h0dxqb.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765170985/Screenshot_167_eoewg8.png",
