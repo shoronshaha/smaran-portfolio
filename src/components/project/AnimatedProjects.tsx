@@ -105,7 +105,7 @@ const AnimatedProjects = ({ projects, handleImage }: Props) => {
                   <Button
                     type="button"
                     variant="primary"
-                    className="hover:text-black bg-black dark:hover:text-white text-white hover:bg-transparent"
+                    className=" bg-black dark:hover:text-white text-white hover:bg-transparent"
                   >
                     View Project
                   </Button>

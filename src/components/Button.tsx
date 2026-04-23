@@ -5,10 +5,10 @@ type Props = {
     className?: string;
 }
 
-const Button = ({ variant = 'primary', className, ...props }: Props) => {
+const Button = ({ variant = 'primary', className, children, ...props }: Props) => {
     return (
         <button className={` ${className} ${variant}`} {...props}>
-            
+            {children}
         </button>
     )
 }
