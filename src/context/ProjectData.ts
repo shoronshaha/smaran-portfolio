@@ -136,6 +136,21 @@ export const PROJECTS: ProjectType[] = [
     github_link: "",
     default_image_index: 0,
   },
+   {
+    id: "420fd351-5fed-4e49-9628-4c7k321358654",
+    title: "Dev Interview",
+    description:
+      "ReCall JS – A dedicated interview preparation platform for full-stack developers, featuring a structured collection of Q&A on JavaScript, React, Node.js, and modern web architecture. Designed to help developers crack technical interviews with confidence.",
+    images: [
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1776932633/Screenshot_2026-04-23_130449_rarzw7.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1776932632/Screenshot_2026-04-23_130357_rrq4qv.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1776932639/Screenshot_2026-04-23_142207_lqxuk9.png",
+      "https://res.cloudinary.com/dck5iqtu3/image/upload/v1776932637/Screenshot_2026-04-23_142229_ayjwco.png",
+    ],
+    link: "https://devinterview.smaran.me/bn",
+    github_link: "",
+    default_image_index: 0,
+  },
   {
     id: "420fd351-5fed-4e49-9628-4c7k32117654",
     title: "Azmainfashion",
