@@ -93,7 +93,7 @@ export const PROJECTS: ProjectType[] = [
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765172678/Screenshot_206_jo7fnd.png",
       "https://res.cloudinary.com/dck5iqtu3/image/upload/v1765172677/Screenshot_207_cy1bfh.png",
     ],
-    link: "https://hisabi-pi.vercel.app/",
+    link: "https://hisabi.smaran.me/",
     github_link: "",
     default_image_index: 0,
     
