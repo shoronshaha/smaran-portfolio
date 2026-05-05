@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const WorkDone = () => {
   return (
-    <div className="flex items-center justify-start">
-      <div>
+    <div className="flex items-center justify-end w-full">
+      <div className="text-right">
         <h2 className="font-motion text-5xl md:text-8xl bg-gradient-to-br from-orange-300 via-green-300 to-blue-300 bg-clip-text text-transparent">
           WORK <br />
           DONE
@@ -14,7 +14,7 @@ const WorkDone = () => {
       </div>
       <Image
         src="/tree.png"
-        className="-rotate-12"
+        className="-rotate-12 ml-4"
         alt="works"
         width={100}
         height={100}

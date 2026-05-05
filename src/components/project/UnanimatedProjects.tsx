@@ -14,6 +14,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/free-mode';
 
+import UniqueGapAnimation from "./UniqueGapAnimation";
+
 type Props = {
   projects: ProjectType[];
   handleImage: ({
